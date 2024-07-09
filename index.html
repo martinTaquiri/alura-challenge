@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portafolio</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <div class="logo">
+        <img src="assets/logo.png" />
+      </div>
+    <main class="presentacion">
+      <section class="presentacion__contenido">        
+        <div class="presentacion__contenido__textarea">
+          <textarea
+            id="inputText"
+            class="presentacion__contenido__textarea__in"
+          >Ingrese el texto aqui</textarea>
+        </div>
+        <p class="presentacion__contenido__mensaje"><img src="assets/Group.png" alt="imagen de símbolo de exclamación" width="16px" height="16px">Solo letras minúsculas y sin acentos.</p>
+        <div class="presentacion__contenido__botones">
+          <button onclick="encryptText()" class="presentacion__contenido__botones__encriptar">Encriptar</button>
+          <button onclick="decryptText()" class="presentacion__contenido__botones__desencriptar">Desencriptar</button>
+        </div>
+      </section>
+      <section class="presentacion__resultado">
+        <div class="presentacion__resultado__ocultar" id="imagen-con-texto">
+          <img src="assets/Muñeco.png" alt="Imagen de niño con una lupa observando un diamante" class="presentacion__resultado__ocultar__imagen">          
+          <p class="presentacion__resultado__ocultar__textogrande">Ningún mensaje fue</p>
+          <p class="presentacion__resultado__ocultar__textogrande">encontrado</p>
+          <br>
+          <p class="presentacion__resultado__ocultar__textopequeño">Ingresa el texto que desees encriptar o</p>
+          <p class="presentacion__resultado__ocultar__textopequeño">desencriptar.</p>
+        </div>        
+        <div class="presentacion__resultado__textarea">
+          <textarea id="outputText" class="presentacion__resultado__textarea__out" hidden></textarea>
+          <div class="presentacion__resultado__botones">
+            <button onclick="copyToClipboard()" class="presentacion__resultado__boton__copiar" id="presentacion__resultado__textarea__boton" hidden>Copiar</button>
+          </div>          
+        </div>
+        
+      </section>
+    </main>
+    <footer class="footer">
+        <p>Desarrollado por Martín Taquiri</p>
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
